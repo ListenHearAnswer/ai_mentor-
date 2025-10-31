@@ -1,4 +1,9 @@
 import streamlit as st
+st.set_page_config(
+    page_title="AI Mentor za Smisel",
+    page_icon="spirala.png",
+    layout="centered"
+)
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
