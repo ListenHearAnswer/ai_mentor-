@@ -1,9 +1,4 @@
 import streamlit as st
-st.set_page_config(
-    page_title="AI Mentor za Smisel",
-    page_icon="spirala.png",
-    layout="centered"
-)
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
@@ -16,7 +11,7 @@ load_dotenv(dotenv_path="C:/apps/.env")
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # ⚙️ Nastavitve strani
-st.set_page_config(page_title="AI Mentor za Smisel", page_icon="🌿", layout="centered")
+st.set_page_config(page_title="AI Mentor za Smisel", page_icon="spirala.png", layout="centered")
 
 # --- Inicializacija stanja ---
 if "messages" not in st.session_state:
@@ -37,7 +32,7 @@ frankl_quotes = [
 
 # --- Uvodni zaslon ---
 if st.session_state.step == "welcome":
-    st.title("🌿 AI Mentor za Smisel")
+    st.title("spirala.png AI Mentor za Smisel")
     st.markdown("""
     Dobrodošel/a v **AI Mentorju za Smisel** 🌱  
     Tvoj mentor govori z glasom **Viktorja Frankla** –  
@@ -50,7 +45,7 @@ if st.session_state.step == "welcome":
 
 # --- Izbira teme ---
 elif st.session_state.step == "topic":
-    st.header("🧭 Kaj želiš raziskati danes?")
+    st.header("Kaj želiš raziskati danes?")
     st.markdown("Izberi temo ali napiši svojo:")
 
     topics = [
