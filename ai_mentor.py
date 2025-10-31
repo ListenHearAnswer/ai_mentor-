@@ -32,7 +32,7 @@ frankl_quotes = [
 
 # --- Uvodni zaslon ---
 if st.session_state.step == "welcome":
-    st.title("spirala.png AI Mentor za Smisel")
+    st.title("AI Mentor za Smisel")
     st.markdown("""
     Dobrodošel/a v **AI Mentorju za Smisel** 🌱  
     Tvoj mentor govori z glasom **Viktorja Frankla** –  
